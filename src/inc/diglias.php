@@ -1,9 +1,14 @@
 <?php
-
 /*
-Copyright 2016 (C) Diglias AB
-
-@author jonas
+* Copyright 2016 (C) Diglias AB
+*
+* @author jonas
+*
+* A set of contants and helper functions to aid in the implementation of 
+* the EAPI protocoll to authenticate users trough the Diglias GO backend.
+* 
+* The API specificaiton can be found @: https://test.diglias.com/doc-rp/eapi.jsp
+*
 */
 
 // The COMPANY_NAME is supplied by Diglias when a configuration for a 
@@ -16,7 +21,7 @@ define("COMPANY_NAME","playground",true);
 // from the Diglias GO server.
 define("MAC_KEY","LW4eUhQkJfwJGgQU8JCT/g==",true);
 
-// A URL to rdirect the users browser to when intiating a authentication
+// A URL to redirect the users browser to when intiating a authentication
 // transaction. Depending on enviroment i can have three different values:
 // 
 // Production: "https://login.diglias.com/main-eapi/begin"
@@ -66,33 +71,33 @@ function diglias_compute_mac($params, $mac_key) {
 * to to initiate a authentication transaction.
 */
 
-function diglias_build_authn_url($return_link,$cancel_link,$reject_link){
+function diglias_build_authn_url( $return_link, $cancel_link, $reject_link){
 	
 	// 	Set up request parameters
-	    $params  = array(
-	        'auth_companyname' => COMPANY_NAME,
-	        'auth_requestid' => 'XXXXXXX',  // 	Not used in the sample app
-	        'auth_returnlink' => $return_link,
-	        'auth_cancellink' => $cancel_link,
-	        'auth_rejectlink' => $reject_link
-	        );
+	$params  = array(
+		'auth_companyname' => COMPANY_NAME,
+		'auth_requestid' => 'XXXXXXX',  // 	Not used in the sample app
+		'auth_returnlink' => $return_link,
+		'auth_cancellink' => $cancel_link,
+		'auth_rejectlink' => $reject_link
+		);
 	
 	$params['mac'] = diglias_compute_mac($params, MAC_KEY );
 	
 	// 	Concatenate the parameters into a string suitable as GET request 
 	// 	parameters
-	$requestParams = "";
+	$request_params = "";
 	
 	foreach ($params as $key => $value) {
 		// 		Use a & to separate the parameters
-						if ( strlen($requestParams) > 0 ) {
-			$requestParams = $requestParams."&";
+						if ( strlen($request_params) > 0 ) {
+			$request_params = $request_params."&";
 		}
 		
-		$requestParams = $requestParams.$key."=".$value;
+		$request_params = $request_params.$key."=".$value;
 	}
 	
-	return DIGLIAS_BEGIN_URL."?".$requestParams;
+	return DIGLIAS_BEGIN_URL."?".$request_params;
 }
 
 /**

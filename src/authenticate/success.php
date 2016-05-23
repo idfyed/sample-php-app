@@ -1,16 +1,17 @@
 <?php
 /*
-Copyright 2016 (C) Diglias AB
-
-@author jonas
-
-The Diglias GO server will redirect the users browser to POST to this URL 
-once the authenitcation has been sucessfullty completed.
-
+* Copyright 2016 (C) Diglias AB
+*
+* @author jonas
+*
+* The Diglias GO server will redirect the users browser to POST to this URL 
+* once the authenitcation has been sucessfullty completed.
+*
 */
     require '../inc/header.php';
     require '../inc/diglias.php';
 
+    // Only render as a success if the response can be verified
     if ( diglias_verify_authn_response($_POST) ) {
 ?>
     <h1>Success</h1>

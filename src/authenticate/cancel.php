@@ -1,13 +1,12 @@
 <?php
-
 /*
-opyright 2016 (C) Diglias AB
-
-@author jonas
-
-The Diglias GO server will redirect the users browser this URL 
-if the user cancels the authentication.
-
+* Copyright 2016 (C) Diglias AB
+*
+* @author jonas
+*
+* The Diglias GO server will redirect the users browser this URL 
+* if the user cancels the authentication.
+*
 */
 
 require '../inc/header.php';
