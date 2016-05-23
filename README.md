@@ -5,14 +5,13 @@ A PHP based web application implementing a integration with the Diglias GO servi
 This is by no means a fully fledged web application, it is only a example on how to communicate with the Diglias Go service to authenticate a user and retrieve user attributes. The application does not implement authorization at all. In a real world scenario the implementer would have to use the information retrieved from the Diglias system to authorize the user in the current context.
 
 ## Compatibility
-Since the application is pure PHP it should be possible to run on any platform where node.js exists. It has been developed and tested on Mac OS X. 
+Since the application is pure PHP it should be possible to run on any platform where PHP exists. It has been developed and tested on Mac OS X. 
 
 ## Dependencies
 The application is depending on PHP 5.x and a web server on the hosting system.  
 
 ## Installation
-Clone the repository in your preferred location. Change to the root directory of the cloned repository and issue the command: `npm install`. 
-This will download and install all the necessary dependencies in a subdirectory named `node_modules`.
+Clone the repository in your preferred location.
 
 ## Usage
 
@@ -29,12 +28,12 @@ The directory `src/` should be mapped to the root directory of your PHP enabled 
 
 If you prefer, you can run the application in a docker container. In that case it will not be necessary to install PHP or a web server on you local system.
 
-### Build and Run with Docker compose
+### Build and Run with Docker Compose
 If you have `docker-compose` available you can build and run in one command. Change to the root of the repository and issue `docker-compose up`.
 
 To access the application point your browser to `http://[IP OF DOCKER HOST]:8080`. You can find out the IP of the docker host using `docker-machine ip`.
 
-## Application structure
+## Application Structure
 
 The application in it self if a fairly straight forward PHP application.
 
@@ -44,10 +43,10 @@ From a Diglias integration point of view there are really two source files that 
 *  `src/inc/diglias.php` - A set of constants and functions implementing parts of the EAPI protocoll.
 
 
-## Contact and feedback
+## Contact and Feedback
 Any questions, or feedback on the code or Diglias in general?
 
-jonas@diglias.com
+jona(a)diglias.com
 
 Copyright (c) 2016 Diglias AB
 
