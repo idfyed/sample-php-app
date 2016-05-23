@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+
+  php-server:
+    image: php:5-apache
+
+    volumes:
+      - "./src:/var/www/html"
+
+    ports:
+      - "8080:80"
+    restart: always
