@@ -130,7 +130,7 @@ class DigliasRelyingParty {
 	*/
 	
 	function verify_authn_response($params) {
-		$mac = diglias_compute_mac($params,$this->mac_key);
+		$mac = $this->compute_mac($params,$this->mac_key);
 		return strcmp( $mac, $params['mac'] ) === 0;
 	}
 }
