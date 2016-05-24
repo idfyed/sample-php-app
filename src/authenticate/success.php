@@ -10,6 +10,7 @@
 */
     require '../inc/header.php';
     require '../inc/diglias.php';
+    require '../inc/config.php';
 
     // Only render as a success if the response can be verified
     $RP = new DigliasRelyingParty(COMPANY_NAME,MAC_KEY,DigliasEndpoint::ProdTest);

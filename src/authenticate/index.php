@@ -9,6 +9,7 @@
 *
 */
     require '../inc/diglias.php';
+    require '../inc/config.php';
 
     // Find out the base URL of the URL:s that the Diglias GO server 
     // will redirect the user to depending on result. The URL:s can not
