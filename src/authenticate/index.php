@@ -20,7 +20,10 @@
                 $_SERVER['SERVER_PORT'] .
                 "/authenticate/";
     
-    header('Location: ' . diglias_build_authn_url(
+    
+    $RP = new DigliasRelyingParty(COMPANY_NAME, MAC_KEY, DigliasEndpoint::ProdTest );
+  
+    header('Location: ' . $RP->build_authn_url(
                                 DigliasEndpoint::ProdTest,
                                 $url_base . "success.php" ,
                                 $url_base . "cancel.php",

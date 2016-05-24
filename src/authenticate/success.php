@@ -12,7 +12,9 @@
     require '../inc/diglias.php';
 
     // Only render as a success if the response can be verified
-    if ( diglias_verify_authn_response($_POST) ) {
+    $RP = new DigliasRelyingParty(COMPANY_NAME,MAC_KEY,DigliasEndpoint::ProdTest);
+    
+    if ( $RP->verify_authn_response($_POST) ) {
 ?>
     <h1>Success</h1>
     <p>Authenticaton sucessful</p>
