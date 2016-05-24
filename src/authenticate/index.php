@@ -21,6 +21,7 @@
                 "/authenticate/";
     
     header('Location: ' . diglias_build_authn_url(
+                                DigliasEndpoint::ProdTest,
                                 $url_base . "success.php" ,
                                 $url_base . "cancel.php",
                                 $url_base . "reject.php") ,

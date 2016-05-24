@@ -21,6 +21,7 @@ define("COMPANY_NAME","playground",true);
 // from the Diglias GO server.
 define("MAC_KEY","LW4eUhQkJfwJGgQU8JCT/g==",true);
 
+
 // A URL to redirect the users browser to when intiating a authentication
 // transaction. Depending on enviroment i can have three different values:
 // 
@@ -28,7 +29,12 @@ define("MAC_KEY","LW4eUhQkJfwJGgQU8JCT/g==",true);
 // Prodtest: "https://prodtest-login.diglias.com/main-eapi/begin"
 // Test: "https://test.diglias.com/main-eapi/begin"
 //
-define("DIGLIAS_BEGIN_URL","https://prodtest-login.diglias.com/main-eapi/begin",true);
+
+abstract class DigliasEndpoint {
+	const Prod = "https://login.diglias.com/main-eapi/begin";
+	const ProdTest = "https://prodtest-login.diglias.com/main-eapi/begin";
+	const Test = "https://test.diglias.com/main-eapi/begin";
+}
 
 
 /**
@@ -71,7 +77,9 @@ function diglias_compute_mac($params, $mac_key) {
 * to to initiate a authentication transaction.
 */
 
-function diglias_build_authn_url( $return_link, $cancel_link, $reject_link){
+// endpoint, macKey, parameters 
+
+function diglias_build_authn_url( $endpoint, $return_link, $cancel_link, $reject_link){
 	
 	// 	Set up request parameters
 	$params  = array(
@@ -97,7 +105,7 @@ function diglias_build_authn_url( $return_link, $cancel_link, $reject_link){
 		$request_params = $request_params.$key."=".$value;
 	}
 	
-	return DIGLIAS_BEGIN_URL."?".$request_params;
+	return $endpoint."?".$request_params;
 }
 
 /**
