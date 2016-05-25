@@ -12,22 +12,27 @@
 *
 */
 
-// A URL to redirect the users browser to when intiating a authentication
-// transaction. Depending on enviroment i can have three different values.
 
+/*
+* Enumeration of possible end points - used as constrcutor argument
+* when creating a DigliasRelying party object.
+*/ 
 abstract class DigliasEndpoint {
 	const Prod = "https://login.diglias.com/main-eapi/begin";
 	const ProdTest = "https://prodtest-login.diglias.com/main-eapi/begin";
 	const Test = "https://test.diglias.com/main-eapi/begin";
 }
 
-
+/*
+* Immutabele class that implements helper methods for implementation
+* of the EAPI protocoll.
+*/
 class DigliasRelyingParty {
-	
-	private $company_name;
-	private $mac_key;
-	private $endpoint;
-	
+
+	/*
+	* Constructs a RelyingParty object intitializing with information
+	* about what server side RP configuration to refer to.
+	*/
 	function __construct($company_name, $mac_key, $endpoint = DigliasEndpoint::Prod ) {
 		$this->company_name = $company_name;
 		$this->mac_key = $mac_key;
@@ -63,13 +68,21 @@ class DigliasRelyingParty {
 	}
 	
 	/**
-	Validates the response from the Diglias server by computing a mac and
-	* comparing it with the enclosed one.
+	*
+	* Validates the response from the Diglias Go server by computing
+	* a mac and comparing it with the enclosed one.
+	* 
+	* @paramater $params: A associative array of key/value pairs as
+	* receieved from the Diglias Go server.
 	*/
 	function verify_authn_response($params) {
 		$mac = $this->compute_mac($params,$this->mac_key);
 		return strcmp( $mac, $params['mac'] ) === 0;
 	}
+
+	private $company_name;
+	private $mac_key;
+	private $endpoint;
 
 	/**
 	* Computes a MAC according to the API specification.
