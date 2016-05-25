@@ -1,11 +1,11 @@
 <?php
 
 /*
-Copyright 2016 (C) Diglias AB
+* Copyright 2016 (C) Diglias AB
 *
 * @author jonas
 *
-* A class that aid in the implementation of the EAPI protocoll to
+* A class that aid in the implementation of the EAPI protocol to
 * authenticate users trough the Diglias GO backend.
 * 
 * The API specificaiton can be found @: https://test.diglias.com/doc-rp/eapi.jsp
@@ -13,11 +13,7 @@ Copyright 2016 (C) Diglias AB
 */
 
 // A URL to redirect the users browser to when intiating a authentication
-// transaction. Depending on enviroment i can have three different values:
-// // Production: "https://login.diglias.com/main-eapi/begin"
-// Prodtest: "https://prodtest-login.diglias.com/main-eapi/begin"
-// Test: "https://test.diglias.com/main-eapi/begin"
-//
+// transaction. Depending on enviroment i can have three different values.
 
 abstract class DigliasEndpoint {
 	const Prod = "https://login.diglias.com/main-eapi/begin";
@@ -42,17 +38,12 @@ class DigliasRelyingParty {
 	Builds a URL including parameters that the user agent should be redirected
 	* to to initiate a authentication transaction.
 	*/
-	public function build_authn_url( $endpoint, $return_link, $cancel_link, $reject_link){
+	public function build_authn_url( $params ){
 		
-		// Set up request parameters
-		$params  = array(
-			'auth_companyname' => $this->company_name,
-			'auth_requestid' => 'XXXXXXX',  // 		Not used in the sample app
-			'auth_returnlink' => $return_link,
-			'auth_cancellink' => $cancel_link,
-			'auth_rejectlink' => $reject_link
-			);
-
+		// Add the company name 
+		$params['auth_companyname'] = $this->company_name;
+		
+		// Compute mac and add it to the parameters
 		$params['mac'] = $this->compute_mac($params, $this->mac_key );
 		
 		// Concatenate the parameters into a string suitable as GET request 
@@ -68,7 +59,7 @@ class DigliasRelyingParty {
 			$request_params = $request_params.$key."=".$value;
 		}
 		
-		return $endpoint."?".$request_params;
+		return $this->endpoint."?".$request_params;
 	}
 	
 	/**
@@ -101,7 +92,7 @@ class DigliasRelyingParty {
 				$macData = $macData."&";
 			}
 		
-			// Sort the values alphabetically
+			// Sort the parameter values alphabetically
 			$values = explode( ",", $value);
 			sort($values);
 			

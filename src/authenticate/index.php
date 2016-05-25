@@ -20,15 +20,15 @@
                 ":" .
                 $_SERVER['SERVER_PORT'] .
                 "/authenticate/";
-    
+                
+    $params  = array(
+        'auth_requestid' => 'XXXXXXX',  // 		Not used in the sample app
+        'auth_returnlink' => $url_base . "success.php",
+        'auth_cancellink' => $url_base . "cancel.php",
+        'auth_rejectlink' => $url_base . "reject.php"
+    );
     
     $RP = new DigliasRelyingParty(COMPANY_NAME, MAC_KEY, DigliasEndpoint::ProdTest );
   
-    header('Location: ' . $RP->build_authn_url(
-                                DigliasEndpoint::ProdTest,
-                                $url_base . "success.php" ,
-                                $url_base . "cancel.php",
-                                $url_base . "reject.php") ,
-                                true,
-                                302 );
+    header('Location: ' . $RP->build_authn_url( $params ) , true, 302 );
 ?>
