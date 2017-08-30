@@ -23,8 +23,9 @@ $RP = new DigliasRelyingParty(COMPANY_NAME, MAC_KEY, DigliasEndpoint::ProdTest);
 
 if ($RP->verify_authn_response($_POST)) {
 
-    // Check that the reposnse was intended for this request
-    if ($_POST["auth_inresponseto"] === $_COOKIE["DigliasRequestId"]) {
+    // Check that the response was intended for this request
+    session_start();
+    if ($_POST["auth_inresponseto"] === $_SESSION["DigliasRequestId"]) {
 
         $t = new Template('success');
         echo $t->render( array(

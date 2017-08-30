@@ -15,9 +15,10 @@ require '../../config/config.php';
 use sample\DigliasRelyingParty;
 use sample\DigliasEndpoint;
 
-// Generate a random request Id and store it in a session cookie
+// Generate a random request Id and store it in the session
 $requestId = generateRandomString();
-setcookie('DigliasRequestId', $requestId, null, null, null, false, true);
+session_start();
+$_SESSION['DigliasRequestId'] = $requestId;
 
 // Find out the base URL of the URL:s that the Diglias GO server
 // will redirect the user to depending on result. The URL:s can not
