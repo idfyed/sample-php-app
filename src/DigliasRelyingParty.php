@@ -32,14 +32,14 @@ class DigliasRelyingParty
      * Builds a URL including parameters that the user agent should be redirected
      * to to initiate a authentication transaction.
      */
-    public function build_authn_url($params)
+    public function buildAuthnURL($params)
     {
 
         // Add the company name
         $params['auth_companyname'] = $this->company_name;
 
         // Compute mac and add it to the parameters
-        $params['mac'] = $this->compute_mac($params, $this->mac_key);
+        $params['mac'] = $this->computeMac($params, $this->mac_key);
 
         // Concatenate the parameters into a string suitable as GET request
         // 	parameters
@@ -65,9 +65,9 @@ class DigliasRelyingParty
      * @paramater $params: A associative array of key/value pairs as
      * receieved from the Diglias Go server.
      */
-    function verify_authn_response($params)
+    function verifyAuthnResponse($params)
     {
-        $mac = $this->compute_mac($params, $this->mac_key);
+        $mac = $this->computeMac($params, $this->mac_key);
         return strcmp($mac, $params['mac']) === 0;
     }
 
@@ -78,7 +78,7 @@ class DigliasRelyingParty
     /**
      * Computes a MAC according to the API specification.
      */
-    private function compute_mac($params)
+    private function computeMac($params)
     {
 
         // Sort the parameters alphabetically

@@ -39,7 +39,7 @@ $params  = array(
 
 $RP = new DigliasRelyingParty(COMPANY_NAME, MAC_KEY, DigliasEndpoint::ProdTest );
 
-header('Location: ' . $RP->build_authn_url( $params ) , true, 302 );
+header('Location: ' . $RP->buildAuthnURL( $params ) , true, 302 );
 
 
 function generateRandomString($length = 16)

@@ -21,7 +21,7 @@ use sample\Template;
 // Only render as a success if the response can be verified
 $RP = new DigliasRelyingParty(COMPANY_NAME, MAC_KEY, DigliasEndpoint::ProdTest);
 
-if ($RP->verify_authn_response($_POST)) {
+if ($RP->verifyAuthnResponse($_POST)) {
 
     // Check that the response was intended for this request
     session_start();
