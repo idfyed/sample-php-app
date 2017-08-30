@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * Copyright 2017 (C) Diglias AB
+ *
+ * @author jonas
+ *
+ * The Diglias GO server will redirect the users browser to POST to this URL
+ * once the authenitcation has been sucessfullty completed.
+ *
+ */
+
+
+require '../../vendor/autoload.php';
+require '../../config/config.php';
+
+use sample\DigliasRelyingParty;
+use sample\DigliasEndpoint;
+use sample\Template;
+
+// Only render as a success if the response can be verified
+$RP = new DigliasRelyingParty(COMPANY_NAME, MAC_KEY, DigliasEndpoint::ProdTest);
+
+if ($RP->verify_authn_response($_POST)) {
+
+    // Check that the reposnse was intended for this request
+    if ($_POST["auth_inresponseto"] === $_COOKIE["DigliasRequestId"]) {
+
+        $t = new Template('success');
+        echo $t->render( array(
+           'body' => $_POST
+        ));
+
+    } else {
+        $t = new Template('invalid-request');
+        echo $t->render( null);
+    }
+} else {
+    $t = new Template('invalid-mac');
+    echo $t->render( null);
+}

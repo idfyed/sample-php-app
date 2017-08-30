@@ -8,19 +8,21 @@ This is by no means a fully fledged web application, it is only a example on how
 Since the application is pure PHP it should be possible to run on any platform where PHP exists. It has been developed and tested on Mac OS X. 
 
 ## Dependencies
-The application is depending on PHP 5.x and a web server on the hosting system.  
+The application is depending on PHP 5.x and a web server on the hosting system and [*composer*](http://getcomposer.org) to manage dependencies and autoloading.  
 
 ## Installation
 Clone the repository in your preferred location.
 
+In the root of the repository run `composer install` to download project dependencies.
+
 ## Usage
 
 ### Starting the application
-The directory `src/` should be mapped to the root directory of your PHP enabled web server.
+The directory `public/` should be mapped to the root directory of your PHP enabled web server.
 
 ### Running the application
 1. Point your browser to the root directory of your local web server. 
-2. Click the link **Authenticate**. Your browser should now get redirected to the Diglias server that will render a QR code on the screen.
+2. Click the button **Authenticate**. Your browser should now get redirected to the Diglias server that will render a QR code on the screen.
 3. Use your Diglias Me id to authenticate yourself to the Diglias system.
 4. If the authentication is successful you will be directed back to the application where all the supplied user properties will be rendered on a page.
 
@@ -39,8 +41,8 @@ The application in it self if a fairly straight forward PHP application.
 
 From a Diglias integration point of view there are really two source files that is of interest:
 
-*  `src/authenticate/index.php` - This is where the authentication transaction is initiated by preparing a url and redirecting the user to the Diglias GO server.
-*  `src/inc/diglias.php` - A set of constants and functions implementing parts of the EAPI protocoll.
+*  `public/authenticate/index.php` - This is where the authentication transaction is initiated by preparing a url and redirecting the user to the Diglias GO server.
+*  `src/DigliasRelyingParty.php` and `src/DigliasEndpoint.php` - A set of constants and functions implementing parts of the EAPI protocoll.
 
 
 ## Contact and Feedback

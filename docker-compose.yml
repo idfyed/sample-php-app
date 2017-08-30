@@ -6,7 +6,11 @@ services:
     image: php:5-apache
 
     volumes:
-      - "./src:/var/www/html"
+      - "./public:/var/www/html"
+      - "./src:/var/www/src"
+      - "./config:/var/www/config"
+      - "./resources:/var/www/resources"
+      - "./vendor:/var/www/vendor"
 
     ports:
       - "8080:80"

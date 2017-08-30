@@ -1,34 +1,18 @@
 <?php
 
 /*
-* Copyright 2016 (C) Diglias AB
+* Copyright 2017 (C) Diglias AB
 *
 * @author jonas
 *
 * A class that aid in the implementation of the EAPI protocol to
 * authenticate users trough the Diglias GO backend.
-* 
+*
 * The API specificaiton can be found @: https://test.diglias.com/doc-rp/eapi.jsp
 *
 */
 
-
-/*
-* Enumeration of possible end points - used as constrcutor argument
-* when creating a DigliasRelying party object.
-*/
-
-abstract class DigliasEndpoint
-{
-    const Prod = "https://login.diglias.com/main-eapi/begin";
-    const ProdTest = "https://prodtest-login.diglias.com/main-eapi/begin";
-    const Test = "https://test.diglias.com/main-eapi/begin";
-}
-
-/*
-* Immutabele class that implements helper methods for implementation
-* of the EAPI protocoll.
-*/
+namespace sample;
 
 class DigliasRelyingParty
 {
@@ -37,10 +21,10 @@ class DigliasRelyingParty
     * Constructs a RelyingParty object intitializing with information
     * about what server side RP configuration to refer to.
     */
-    function __construct($company_name, $mac_key, $endpoint = DigliasEndpoint::Prod)
+    function __construct($companyName, $macKey, $endpoint = DigliasEndpoint::Prod)
     {
-        $this->company_name = $company_name;
-        $this->mac_key = $mac_key;
+        $this->company_name = $companyName;
+        $this->mac_key = $macKey;
         $this->endpoint = $endpoint;
     }
 
