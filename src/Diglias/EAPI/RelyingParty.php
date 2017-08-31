@@ -39,7 +39,7 @@ class RelyingParty
         $params['auth_companyname'] = $this->company_name;
 
         // Compute mac and add it to the parameters
-        $params['mac'] = $this->computeMac($params, $this->mac_key);
+        $params['mac'] = RelyingParty::computeMac($params, $this->mac_key);
 
         // Concatenate the parameters into a string suitable as GET request
         // 	parameters
@@ -67,18 +67,14 @@ class RelyingParty
      */
     function verifyAuthnResponse($params)
     {
-        $mac = $this->computeMac($params, $this->mac_key);
+        $mac = RelyingParty::computeMac($params, $this->mac_key);
         return strcmp($mac, $params['mac']) === 0;
     }
-
-    private $company_name;
-    private $mac_key;
-    private $endpoint;
 
     /**
      * Computes a MAC according to the API specification.
      */
-    private function computeMac($params)
+    static function computeMac($params, $macKey )
     {
 
         // Sort the parameters alphabetically
@@ -102,8 +98,12 @@ class RelyingParty
         }
 
         // Calculate the MAC
-        return strtoupper(hash_hmac("md5", $macData, $this->mac_key));
+        return strtoupper(hash_hmac("md5", $macData, $macKey));
     }
+
+    private $company_name;
+    private $mac_key;
+    private $endpoint;
 }
 
 ?>
