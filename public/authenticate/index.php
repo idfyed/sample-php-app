@@ -12,8 +12,8 @@
 require '../../vendor/autoload.php';
 require '../../config/config.php';
 
-use sample\DigliasRelyingParty;
-use sample\DigliasEndpoint;
+use Diglias\EAPI\RelyingParty;
+use Diglias\EAPI\Endpoint;
 
 // Generate a random request Id and store it in the session
 $requestId = generateRandomString();
@@ -37,7 +37,7 @@ $params  = array(
     'auth_rejectlink' => $url_base . "reject.php"
 );
 
-$RP = new DigliasRelyingParty(COMPANY_NAME, MAC_KEY, DigliasEndpoint::ProdTest );
+$RP = new RelyingParty(COMPANY_NAME, MAC_KEY, Endpoint::ProdTest );
 
 header('Location: ' . $RP->buildAuthnURL( $params ) , true, 302 );
 

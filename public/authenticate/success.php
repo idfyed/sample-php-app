@@ -14,12 +14,12 @@
 require '../../vendor/autoload.php';
 require '../../config/config.php';
 
-use sample\DigliasRelyingParty;
-use sample\DigliasEndpoint;
+use Diglias\EAPI\RelyingParty;
+use Diglias\EAPI\Endpoint;
 use sample\Template;
 
 // Only render as a success if the response can be verified
-$RP = new DigliasRelyingParty(COMPANY_NAME, MAC_KEY, DigliasEndpoint::ProdTest);
+$RP = new RelyingParty(COMPANY_NAME, MAC_KEY, Endpoint::ProdTest);
 
 if ($RP->verifyAuthnResponse($_POST)) {
 

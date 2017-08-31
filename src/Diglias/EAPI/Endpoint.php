@@ -8,9 +8,9 @@
  * @author jonas
  */
 
-namespace sample;
+namespace Diglias\EAPI;
 
-abstract class DigliasEndpoint
+abstract class Endpoint
 {
     const Prod = "https://login.diglias.com/main-eapi/begin";
     const ProdTest = "https://prodtest-login.diglias.com/main-eapi/begin";

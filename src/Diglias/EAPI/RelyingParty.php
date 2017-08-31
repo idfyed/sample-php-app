@@ -12,16 +12,16 @@
 *
 */
 
-namespace sample;
+namespace Diglias\EAPI;
 
-class DigliasRelyingParty
+class RelyingParty
 {
 
     /*
     * Constructs a RelyingParty object intitializing with information
     * about what server side RP configuration to refer to.
     */
-    function __construct($companyName, $macKey, $endpoint = DigliasEndpoint::Prod)
+    function __construct($companyName, $macKey, $endpoint = Endpoint::Prod)
     {
         $this->company_name = $companyName;
         $this->mac_key = $macKey;

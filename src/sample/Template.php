@@ -25,7 +25,7 @@ class Template
      */
     function __construct($templateName)
     {
-        $templateDir = dirname(dirname(__FILE__)) . '/resources';
+        $templateDir = dirname(dirname(dirname(__FILE__))) . '/resources';
 
         $this->engine = new Handlebars(array(
             'loader' => new FilesystemLoader($templateDir, array(
