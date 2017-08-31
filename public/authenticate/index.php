@@ -1,13 +1,13 @@
 <?php
 /**
-* Copyright 2017 (C) Diglias AB
-*
-* @author jonas
-*
-* Prepare a message to the Diglias GO server and redirect the users
-* browser to Diglias GO to ask the user to authenticate.
-*
-*/
+ * Copyright 2017 (C) Diglias AB
+ *
+ * @author jonas
+ *
+ * Prepare a message to the Diglias GO server and redirect the users
+ * browser to Diglias GO to ask the user to authenticate.
+ *
+ */
 
 require '../../vendor/autoload.php';
 require '../../config/config.php';
@@ -15,41 +15,44 @@ require '../../config/config.php';
 use Diglias\EAPI\RelyingParty;
 use Diglias\EAPI\Endpoint;
 
+use sample\Util;
+
+
+
 // Generate a random request Id and store it in the session
-$requestId = generateRandomString();
+$requestId = Util::generateRandomString();
 session_start();
 $_SESSION['DigliasRequestId'] = $requestId;
 
-// Find out the base URL of the URL:s that the Diglias GO server
-// will redirect the user to depending on result. The URL:s can not
-// be relative since the call is originating from another server.
-$url_base = ($_SERVER['HTTPS'] ? "https" : "http" ) .
-            "://" .
-            $_SERVER['SERVER_NAME'] .
-            ":" .
-            $_SERVER['SERVER_PORT'] .
-            "/authenticate/";
 
-$params  = array(
+
+$params = array(
     'auth_requestid' => $requestId,
-    'auth_returnlink' => $url_base . "success.php",
-    'auth_cancellink' => $url_base . "cancel.php",
-    'auth_rejectlink' => $url_base . "reject.php"
+    'auth_returnlink' => Util::buildEndpointURL("/authenticate/success.php"),
+    'auth_cancellink' => Util::buildEndpointURL("/authenticate/cancel.php"),
+    'auth_rejectlink' => Util::buildEndpointURL("/authenticate/reject.php")
 );
 
-$RP = new RelyingParty(COMPANY_NAME, MAC_KEY, Endpoint::ProdTest );
 
-header('Location: ' . $RP->buildAuthnURL( $params ) , true, 302 );
+// Find out of the requested attributes should be filtered or if the
+// default configuration should be used.
+if (count($_POST) > 0) {
 
-
-function generateRandomString($length = 16)
-{
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $charactersLength = strlen($characters);
-    $randomString = '';
-    for ($i = 0; $i < $length; $i++) {
-        $randomString .= $characters[rand(0, $charactersLength - 1)];
-    }
-    return $randomString;
+    // To use a subset of the attributes, supply the names as a comma separated
+    // list on the parameter auth_attributes.
+    $params['auth_attributes'] = '';
+    foreach ($_POST as $key => $value) {
+        if (strlen($params['auth_attributes']) > 0) {
+            $params['auth_attributes'] = $params['auth_attributes'] . ',';
+        }
+        $params['auth_attributes'] = $params['auth_attributes'] . $key;
+   }
 }
+
+$RP = new RelyingParty(COMPANY_NAME, MAC_KEY, Endpoint::ProdTest);
+
+header('Location: ' . $RP->buildAuthnURL($params), true, 302);
+
+
+
 
