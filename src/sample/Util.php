@@ -49,4 +49,22 @@ class Util
             $_SERVER['SERVER_PORT'] .
             $path;
     }
+
+
+    /**
+     * Keeps track of request id that have been used, and register new ones.
+     *
+     * @param $id
+     * @return boolean - False is the session id has been used before.
+     */
+    static function validateRequestId($id) {
+
+        // Alwayes returns true to simplify the sample application.
+        // In a production application the session id should be stored in persistant storage
+        // available to all requests.
+        // I would also require some kind of clean up mechanism.
+
+        return true;
+    }
+
 }
