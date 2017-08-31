@@ -13,10 +13,8 @@ require '../../vendor/autoload.php';
 require '../../config/config.php';
 
 use Diglias\EAPI\RelyingParty;
-use Diglias\EAPI\Endpoint;
 
 use sample\Util;
-
 
 
 // Generate a random request Id and store it in the session
@@ -49,7 +47,7 @@ if (count($_POST) > 0) {
    }
 }
 
-$RP = new RelyingParty(COMPANY_NAME, MAC_KEY, Endpoint::ProdTest);
+$RP = new RelyingParty(COMPANY_NAME, MAC_KEY, EAPI_ENDPOINT);
 
 header('Location: ' . $RP->buildAuthnURL($params), true, 302);
 

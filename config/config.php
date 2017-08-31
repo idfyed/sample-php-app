@@ -10,4 +10,5 @@ define("COMPANY_NAME","playground",true);
 // from the Diglias Go server.
 define("MAC_KEY","LW4eUhQkJfwJGgQU8JCT/g==",true);
 
-?>
+// Diglias backend environment to use for authentication.
+define("EAPI_ENDPOINT", Diglias\EAPI\Endpoint::ProdTest, true);
