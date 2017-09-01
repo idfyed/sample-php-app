@@ -1,16 +1,16 @@
 <?php
 
-/*
-* Copyright 2017 (C) Diglias AB
-*
-* @author jonas
-*
-* A class that aid in the implementation of the EAPI protocol to
-* authenticate users trough the Diglias GO backend.
-*
-* The API specificaiton can be found @: https://test.diglias.com/doc-rp/eapi.jsp
-*
-*/
+/**
+ * Copyright 2017 (C) Diglias AB
+ *
+ * @author jonas
+ *
+ * A class that aid in the implementation of the EAPI protocol to
+ * authenticate users trough the Diglias GO backend.
+ *
+ * The API specificaiton can be found @: https://test.diglias.com/doc-rp/eapi.jsp
+ *
+ */
 
 namespace Diglias\EAPI;
 
@@ -41,8 +41,8 @@ class RelyingParty
         // Compute mac and add it to the parameters
         $params['mac'] = RelyingParty::computeMac($params, $this->mac_key);
 
-        // Concatenate the parameters into a string suitable as GET request
-        // 	parameters
+        // URL Encode parameter values and concatenate the parameters into a string suitable
+        // as GET request parameters
         $request_params = "";
 
         foreach ($params as $key => $value) {
@@ -51,7 +51,7 @@ class RelyingParty
                 $request_params = $request_params . "&";
             }
 
-            $request_params = $request_params . $key . "=" . $value;
+            $request_params = $request_params . $key . "=" . urlencode($value);
         }
 
         return $this->endpoint . "?" . $request_params;
@@ -74,7 +74,7 @@ class RelyingParty
     /**
      * Computes a MAC according to the API specification.
      */
-    static function computeMac($params, $macKey )
+    static function computeMac($params, $macKey)
     {
 
         // Sort the parameters alphabetically
