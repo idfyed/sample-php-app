@@ -11,10 +11,10 @@ define("COMPANY_NAME","playground",true);
 define("MAC_KEY","LW4eUhQkJfwJGgQU8JCT/g==",true);
 
 // Diglias backend environment to use for authentication.
-define("EAPI_ENDPOINT", Diglias\EAPI\Endpoint::Test, true);
+define("EAPI_ENDPOINT", Diglias\EAPI\Endpoint::Prod, true);
 
 // Key/Password used when accessing the RP Management API.
 define("RP_MANAGEMENT_SECRET", "LW4eUhQkJfwJGgQU8JCT/g==", true);
 
-// Endpoint used when accessing the RP Management API.
-define("RP_MANAGEMENT_ENDPOINT", Diglias\RPManagement\Endpoint::Test, true);
+// Diglias backend environment when accessing the RP Management API.
+define("RP_MANAGEMENT_ENDPOINT", Diglias\RPManagement\Endpoint::Prod, true);
