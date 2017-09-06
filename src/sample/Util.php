@@ -60,7 +60,7 @@ class Util
     static function validateRequestId($id) {
 
         // Alwayes returns true to simplify the sample application.
-        // In a production application the session id should be stored in persistant storage
+        // In a production application the request id should be stored in persistent storage
         // available to all requests.
         // I would also require some kind of clean up mechanism.
 
