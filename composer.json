@@ -1,0 +1,11 @@
+{
+  "require": {
+    "xamin/handlebars.php": "v0.10.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "sample\\": "src/sample",
+      "Diglias\\": "src/Diglias"
+    }
+  }
+}
