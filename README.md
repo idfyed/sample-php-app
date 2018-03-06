@@ -1,14 +1,19 @@
 # Diglias Go PHP sample application
-A PHP based web application implementing a integration with the Diglias GO service to 
-authenticate users using the Diglias Me digital ID. Even though this example focuses on using the Diglias Me digtial ID,
-implementations that use alternate ID:s such as Bank ID or Telia will be very similar and the authentication example is
-relevant in those cases as well.
+A PHP based web application implementing an integration with the
+Diglias GO service to authenticate users using the Diglias Me digital
+ID. Even though this example focuses on using the
+Diglias Me Digtial ID, implementations that use alternate ID:s such as
+Bank ID or Telia will be very similar and the authentication example is relevant in
+those cases as well.
 
 ## Disclaimer
-This is by no means a fully fledged web application, it is only a example on how to communicate with the Diglias Go
-service to authenticate a user and retrieve user attributes. The application does not implement authorization at all.
-In a real world scenario the implementer would have to use the information retrieved from the Diglias system to authorize
-the user in the application context.
+
+This is by no means a fully-fledged web application, it is only a
+example on how to communicate with the Diglias Go service to
+authenticate a user and retrieve user attributes. The application does
+not implement authorization at all. In a real world scenario the
+implementer would have to use the information retrieved from the Diglias
+system to authorize the user in the application context.
 
 ## Compatibility
 Since the application is pure PHP it should be possible to run on any platform where PHP exists. It has been developed
@@ -29,21 +34,21 @@ In the root of the project run `composer install` to download project dependenci
 To run the application with the [PHP Built-in web server](http://php.net/manual/en/features.commandline.webserver.php)
 issue the following command in the root of the project:
 
-`$ php -S localhost:8123 -t public` 
+$ `php -S localhost:8123 -t public` 
 
 For security reasons the relying party configuration used in the code will only accept requests
 originating from `http(s)://localhost*`.
 
 ### Running the application
-Point your browser to `http://localhost:8123`. The sample includes
+Point your browser to [http://localhost:8123](). The sample includes
 3 main scenarios:
 
 #### Authenticate
 
 Demonstrates authentication of a user either by requesting a default
-set of attribute or by selecting a sub set of attributes to request. 
+set of attribute or by selecting a subset of attributes to request. 
 Once the authentication has been successfully completed, it is possible
-to add a value to the users Diglias using the backend RP Management API.
+to add a value to the user's Diglias using the backend RP Management API.
 
 #### Web Flow Connect
 
@@ -52,7 +57,7 @@ part of a normal authentication flow.
 
 #### App Initiated
 
-A sample of how to implement a App initiated flow where the users journey
+A sample of how to implement an App Initiated Flow where the user's journey
 starts by scanning a static QR code and ends up with a web page rendered
 in a web view in the Diglias app.
 
