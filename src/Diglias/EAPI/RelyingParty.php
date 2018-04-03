@@ -83,6 +83,7 @@ class RelyingParty
         $macData = "";
 
         // Concatenate the parameters into one string
+        // Since $_POST overwrites variables with same name, then the multiple values for one attribute is not needed for php implementation.
         foreach ($params as $key => $value) {
 
             // Only params prefixed with "auth_" should be hashed
