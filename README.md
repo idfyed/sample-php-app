@@ -1,4 +1,5 @@
 # Diglias Go PHP sample application
+
 A PHP based web application implementing an integration with the
 Diglias GO service to authenticate users using the Diglias Me digital
 ID. Even though this example focuses on using the
@@ -57,9 +58,10 @@ part of a normal authentication flow.
 
 #### App Initiated
 
-A sample of how to implement an App Initiated Flow where the user's journey
-starts by scanning a static QR code and ends up with a web page rendered
-in a web view in the Diglias app.
+A sample of how to implement App initiated flow where the user's journey
+starts by scanning a static QR code and ends up authenticated with a
+web page rendered in the user's web browser or web view in the Diglias
+app.
 
 ## Running in Docker
 
@@ -67,6 +69,7 @@ If you prefer, you can run the application in a docker container. In that case i
 nor a web server on you local system.
 
 ### Build and Run with Docker Compose
+
 If you have `docker-compose` available you can build and run in one command. Change to the root of the repository and
 issue `docker-compose up`.
 
