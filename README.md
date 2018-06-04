@@ -17,7 +17,7 @@ implementer would have to use the information retrieved from the Diglias
 system to authorize the user in the application context.
 
 ## Compatibility
-Since the application is pure PHP it should be possible to run on any platform where PHP exists. It has been developed
+Since the application is pure PHP it should be possible to run on any platform where PHP exists. It has been developed 
 and tested on Mac OS X. 
 
 ## Dependencies
@@ -53,7 +53,7 @@ to add a value to the user's Diglias using the backend RP Management API.
 
 #### Web Flow Connect
 
-This flow shows how to add a attribute to the users Diglias profile as
+This flow shows how to add a attribute to the user's Diglias profile as
 part of a normal authentication flow.
 
 #### App Initiated
@@ -93,10 +93,9 @@ functionallity.
 with the Diglias Go service.
 
 ## Contact and Feedback
+
 Any questions, or feedback on the code or Diglias in general?
 
-jonas(a)diglias.com
+playground@diglias.com
 
 Copyright (c) 2018 Diglias AB
-
-Author: Jonas
