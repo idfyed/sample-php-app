@@ -1,4 +1,5 @@
 # Diglias Go PHP sample application
+
 A PHP based web application implementing an integration with the
 Diglias GO service to authenticate users using the Diglias Me digital
 ID. Even though this example focuses on using the
@@ -16,7 +17,7 @@ implementer would have to use the information retrieved from the Diglias
 system to authorize the user in the application context.
 
 ## Compatibility
-Since the application is pure PHP it should be possible to run on any platform where PHP exists. It has been developed
+Since the application is pure PHP it should be possible to run on any platform where PHP exists. It has been developed 
 and tested on Mac OS X. 
 
 ## Dependencies
@@ -52,14 +53,15 @@ to add a value to the user's Diglias using the backend RP Management API.
 
 #### Web Flow Connect
 
-This flow shows how to add a attribute to the users Diglias profile as
+This flow shows how to add a attribute to the user's Diglias profile as
 part of a normal authentication flow.
 
 #### App Initiated
 
-A sample of how to implement an App Initiated Flow where the user's journey
-starts by scanning a static QR code and ends up with a web page rendered
-in a web view in the Diglias app.
+A sample of how to implement App initiated flow where the user's journey
+starts by scanning a static QR code and ends up authenticated with a
+web page rendered in the user's web browser or web view in the Diglias
+app.
 
 ## Running in Docker
 
@@ -67,6 +69,7 @@ If you prefer, you can run the application in a docker container. In that case i
 nor a web server on you local system.
 
 ### Build and Run with Docker Compose
+
 If you have `docker-compose` available you can build and run in one command. Change to the root of the repository and
 issue `docker-compose up`.
 
@@ -90,10 +93,9 @@ functionallity.
 with the Diglias Go service.
 
 ## Contact and Feedback
+
 Any questions, or feedback on the code or Diglias in general?
 
-jonas(a)diglias.com
+playground@diglias.com
 
-Copyright (c) 2017 Diglias AB
-
-Author: Jonas
+Copyright (c) 2018 Diglias AB
