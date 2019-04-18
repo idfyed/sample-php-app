@@ -3,7 +3,7 @@
  * Copyright 2019 (C) IDFyed Solutions AB
  *
  *
- * Enumeration of possible end points - used as constrcutor argument
+ * Enumeration of possible end points - used as constructor argument
  * when creating a IDFyed party object.
  * @author jonas
  */

@@ -5,8 +5,8 @@
 define("COMPANY_NAME","playground",true);
 
 // The MAC_KEY is supplied by IDFyed when a configuration for a
-// specific customer is set up in the IDFyed Go system. It shoule be
-// used to verify the authenticity of all messages passed to and recived
+// specific customer is set up in the IDFyed Go system. It should be
+// used to verify the authenticity of all messages passed to and received
 // from the IDFyed Go server.
 define("MAC_KEY","LW4eUhQkJfwJGgQU8JCT/g==",true);
 

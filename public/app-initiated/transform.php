@@ -4,7 +4,7 @@
  *
  * @author jonas
  *
- * Recieves the authnResponse from the Dilgias GO service and transforms it to
+ * Receives the authnResponse from the IDFyed GO service and transforms it to
  * a request that normally would be sent to the application in the app-initiated flow.
  *
  */

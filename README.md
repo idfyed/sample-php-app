@@ -86,10 +86,10 @@ The code related to IDFyed is located as follows:
 defined.
 
 * `src/IDFyed/*` - Wrapper/Helper classes aiding in the communication with IDFyed implementing low level integration
-functionallity.
+functionality.
 
 
-* `config/config.php` - Defines a number of global variables contanning configuration data related to the integration
+* `config/config.php` - Defines a number of global variables containing configuration data related to the integration
 with the IDFyed Go service.
 
 ## Contact and Feedback

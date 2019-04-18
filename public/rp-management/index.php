@@ -4,7 +4,7 @@
  *
  * @author jonas
  *
- * Call the IDFyed service trough a backend channel and add a attribute
+ * Call the IDFyed service through a backend channel and add a attribute
  * to the IDFyed users profile.
  *
  */

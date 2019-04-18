@@ -5,9 +5,9 @@
  *
  * @author jonas
  *
- * A class that wrapps communication to the IDFyed RP Management API.
+ * A class that wraps communication to the IDFyed RP Management API.
  *
- * The API specificaiton can be found @: https://test.IDFyed.com/doc-rp/rp-mgmt.jsp
+ * The API specification can be found @: https://test.idfyed.com/doc-rp/rp-mgmt.jsp
  *
  */
 
@@ -39,7 +39,7 @@ class Client
      *
      * Sends a request to the IDFyed service to add a attribute value to the given users IDFyed profile.
      *
-     * @param $userId - ID of the user as returned in a eralier interaction where the user was authenticated by IDFyed.
+     * @param $userId - ID of the user as returned in a earlier interaction where the user was authenticated by IDFyed.
      * @param $attributeName - Name of the attribute to add.
      * @param $attributeValue - Value to add
      * @return mixed - 204 on success, all other values indicate failure, the value is to be interpreted as a HTTP
