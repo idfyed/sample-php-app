@@ -1,24 +1,24 @@
-# Diglias Go PHP sample application
+# IDFyed Go PHP sample application
 
 A PHP based web application implementing an integration with the
-Diglias GO service to authenticate users using the Diglias Me digital
+IDFyed GO service to authenticate users using the IDFyed Me digital
 ID. Even though this example focuses on using the
-Diglias Me Digtial ID, implementations that use alternate ID:s such as
+IDFyed Me Digtial ID, implementations that use alternate ID:s such as
 Bank ID or Telia will be very similar and the authentication example is relevant in
 those cases as well.
 
 ## Disclaimer
 
 This is by no means a fully-fledged web application, it is only a
-example on how to communicate with the Diglias Go service to
+example on how to communicate with the IDFyed Go service to
 authenticate a user and retrieve user attributes. The application does
 not implement authorization at all. In a real world scenario the
-implementer would have to use the information retrieved from the Diglias
+implementer would have to use the information retrieved from the IDFyed
 system to authorize the user in the application context.
 
 ## Compatibility
-Since the application is pure PHP it should be possible to run on any platform where PHP exists. It has been developed 
-and tested on Mac OS X. 
+Since the application is pure PHP it should be possible to run on any platform where PHP exists. It has been developed
+and tested on Mac OS X.
 
 ## Dependencies
 The application is depending on PHP 5.x and a web server on the hosting system and [*composer*](http://getcomposer.org)
@@ -35,7 +35,7 @@ In the root of the project run `composer install` to download project dependenci
 To run the application with the [PHP Built-in web server](http://php.net/manual/en/features.commandline.webserver.php)
 issue the following command in the root of the project:
 
-$ `php -S localhost:8123 -t public` 
+$ `php -S localhost:8123 -t public`
 
 For security reasons the relying party configuration used in the code will only accept requests
 originating from `http(s)://localhost*`.
@@ -47,20 +47,20 @@ Point your browser to [http://localhost:8123](). The sample includes
 #### Authenticate
 
 Demonstrates authentication of a user either by requesting a default
-set of attribute or by selecting a subset of attributes to request. 
+set of attribute or by selecting a subset of attributes to request.
 Once the authentication has been successfully completed, it is possible
-to add a value to the user's Diglias using the backend RP Management API.
+to add a value to the user's IDFyed using the backend RP Management API.
 
 #### Web Flow Connect
 
-This flow shows how to add a attribute to the user's Diglias profile as
+This flow shows how to add a attribute to the user's IDFyed profile as
 part of a normal authentication flow.
 
 #### App Initiated
 
 A sample of how to implement App initiated flow where the user's journey
 starts by scanning a static QR code and ends up authenticated with a
-web page rendered in the user's web browser or web view in the Diglias
+web page rendered in the user's web browser or web view in the IDFyed
 app.
 
 ## Running in Docker
@@ -80,22 +80,22 @@ To access the application point your browser to `http://localhost:8080`.
 The application in it self if a fairly straight forward PHP application based using [Handlebars](http://handlebarsjs.com/)
 as a templating engine for rendering HTML.
 
-The code related to Diglias is located as follows:
+The code related to IDFyed is located as follows:
 
-* `/public/*` - URL Handlers implementing the application logics where communication with the Diglias GO service is
+* `/public/*` - URL Handlers implementing the application logics where communication with the IDFyed GO service is
 defined.
 
-* `src/Diglias/*` - Wrapper/Helper classes aiding in the communication with Diglias implementing low level integration
+* `src/IDFyed/*` - Wrapper/Helper classes aiding in the communication with IDFyed implementing low level integration
 functionallity.
 
 
 * `config/config.php` - Defines a number of global variables contanning configuration data related to the integration
-with the Diglias Go service.
+with the IDFyed Go service.
 
 ## Contact and Feedback
 
-Any questions, or feedback on the code or Diglias in general?
+Any questions, or feedback on the code or IDFyed in general?
 
-playground@diglias.com
+playground@idfyed.com
 
-Copyright (c) 2018 Diglias AB
+Copyright (c) 2019 IDFyed Solutions AB

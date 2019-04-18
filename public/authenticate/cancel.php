@@ -1,10 +1,10 @@
 <?php
 /**
-* Copyright 2017 (C) Diglias AB
+* Copyright 2019 (C) IDFyed Solutions AB
 *
 * @author jonas
 *
-* The Diglias GO server will redirect the users browser this URL 
+* The IDFyed GO server will redirect the users browser this URL 
 * if the user cancels the authentication.
 *
 */
@@ -15,4 +15,3 @@ use sample\Template;
 
 $t = new Template('cancel');
 echo $t->render(null);
-  

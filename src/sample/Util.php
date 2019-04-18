@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2017 (C) Diglias AB
+ * Copyright 2019 (C) IDFyed Solutions AB
  *
  * @author jonas
  *
@@ -32,7 +32,7 @@ class Util
 
     /**
      *
-     * Find out the base URL of the URL:s that the Diglias GO server
+     * Find out the base URL of the URL:s that the IDFyed GO server
      * will redirect the user to depending on result. The URL:s can not
      * be relative since the call is originating from another server.
      *

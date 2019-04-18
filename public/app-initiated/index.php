@@ -1,19 +1,19 @@
 <?php
 /**
- * Copyright 2017 (C) Diglias AB
+ * Copyright 2019 (C) IDFyed Solutions AB
  *
  * @author jonas
  *
  * The main entrypoint to the application in the app initiated flow. This URL will be receive
  * a GET request once the user has scanned a static QR code. The reponse will be rendered in a webview
- * in the Diglias app and the user perception is that the user is still in the context of the App.
+ * in the IDFyed app and the user perception is that the user is still in the context of the App.
  *
  */
 
 require '../../vendor/autoload.php';
 require '../../config/config.php';
 
-use Diglias\EAPI\RelyingParty;
+use IdFyed\EAPI\RelyingParty;
 
 use sample\Template;
 use sample\Util;

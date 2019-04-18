@@ -5,7 +5,7 @@
   "autoload": {
     "psr-4": {
       "sample\\": "src/sample",
-      "Diglias\\": "src/Diglias"
+      "IdFyed\\": "src/IdFyed"
     }
   }
 }
