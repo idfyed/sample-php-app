@@ -4,7 +4,7 @@
 *
 * @author jonas
 *
-* The IDFyed GO server will redirect the users browser this URL 
+* The Diglias GO server will redirect the users browser this URL 
 * if the user cancels the authentication.
 *
 */

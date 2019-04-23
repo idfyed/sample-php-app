@@ -5,8 +5,8 @@
  *
  * @author jonas
  *
- * The IDFyed GO server will redirect the users browser to POST to this URL
- * once the authenitcation has been sucessfullty completed.
+ * The Diglias GO server will redirect the users browser to POST to this URL
+ * once the authentication has been sucessfullty completed.
  *
  */
 
@@ -14,7 +14,7 @@
 require '../../vendor/autoload.php';
 require '../../config/config.php';
 
-use IdFyed\EAPI\RelyingParty;
+use Diglias\EAPI\RelyingParty;
 use sample\Template;
 
 // Only render as a success if the response can be verified
@@ -24,7 +24,7 @@ if ($RP->verifyAuthnResponse($_POST)) {
 
     // Check that the response was intended for this request
     session_start();
-    if ($_POST["auth_inresponseto"] === $_SESSION["IdFyedRequestId"]) {
+    if ($_POST["auth_inresponseto"] === $_SESSION["DigliasRequestId"]) {
 
         $t = new Template('success');
         echo $t->render( array(

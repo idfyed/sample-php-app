@@ -4,8 +4,8 @@
  *
  * @author jonas
  *
- * The IDFyed GO server will redirect the users browser this URL
- * if the authentication gets rejected by the IDFyed GO server.
+ * The Diglias GO server will redirect the users browser this URL
+ * if the authentication gets rejected by the Diglias GO server.
  *
  */
 

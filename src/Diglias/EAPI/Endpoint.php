@@ -4,11 +4,11 @@
  *
  *
  * Enumeration of possible end points - used as constructor argument
- * when creating a IDFyed party object.
+ * when creating a Diglias party object.
  * @author jonas
  */
 
-namespace IdFyed\EAPI;
+namespace Diglias\EAPI;
 
 abstract class Endpoint
 {

@@ -4,15 +4,15 @@
  *
  * @author jonas
  *
- * Prepare a message to the IDFyed GO server and redirect the users
- * browser to IDFyed GO to ask the user to authenticate.
+ * Prepare a message to the Diglias GO server and redirect the users
+ * browser to Diglias GO to ask the user to authenticate.
  *
  */
 
 require '../../vendor/autoload.php';
 require '../../config/config.php';
 
-use IdFyed\EAPI\RelyingParty;
+use Diglias\EAPI\RelyingParty;
 
 use sample\Util;
 
@@ -20,7 +20,7 @@ use sample\Util;
 // Generate a random request Id and store it in the session
 $requestId = Util::generateRandomString();
 session_start();
-$_SESSION['IdFyedRequestId'] = $requestId;
+$_SESSION['DigliasRequestId'] = $requestId;
 
 
 

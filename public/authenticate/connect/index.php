@@ -2,9 +2,9 @@
 /**
  * Copyright 2019 (C) IDFyed Solutions AB
  *
- * Prepare a message to the IDFyed server and redirect the users
- * browser to IDFyed to ask the user to have a attribute added to
- * their IDFyed.
+ * Prepare a message to the Diglias server and redirect the users
+ * browser to Diglias to ask the user to have a attribute added to
+ * their Diglias.
  *
  * @author jonas
  *
@@ -13,14 +13,14 @@
 require '../../../vendor/autoload.php';
 require '../../../config/config.php';
 
-use IdFyed\EAPI\RelyingParty;
+use Diglias\EAPI\RelyingParty;
 
 use sample\Util;
 
 // Generate a random request Id and store it in the session
 $requestId = Util::generateRandomString();
 session_start();
-$_SESSION['IdFyedRequestId'] = $requestId;
+$_SESSION['DigliasRequestId'] = $requestId;
 
 // A timestamp is required for a connect transaction
 $now = new DateTime("now", new DateTimeZone('UTC'));

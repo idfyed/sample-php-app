@@ -4,15 +4,15 @@
  *
  * @author jonas
  *
- * Call the IDFyed service through a backend channel and add a attribute
- * to the IDFyed users profile.
+ * Call the Diglias service through a backend channel and add a attribute
+ * to the Diglias users profile.
  *
  */
 
 require '../../vendor/autoload.php';
 require '../../config/config.php';
 
-use IdFyed\RPManagement\Client;
+use Diglias\RPManagement\Client;
 
 
 use sample\Template;

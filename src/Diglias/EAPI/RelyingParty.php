@@ -6,13 +6,13 @@
  * @author jonas
  *
  * A class that aid in the implementation of the EAPI protocol to
- * authenticate users trough the IDFyed GO backend.
+ * authenticate users trough the Diglias GO backend.
  *
  * The API specification can be found @: https://test.idfyed.com/doc-rp/eapi.jsp
  *
  */
 
-namespace IdFyed\EAPI;
+namespace Diglias\EAPI;
 
 class RelyingParty
 {
@@ -59,11 +59,11 @@ class RelyingParty
 
     /**
      *
-     * Validates the response from the IDFyed Go server by computing
+     * Validates the response from the Diglias Go server by computing
      * a mac and comparing it with the enclosed one.
      *
      * @paramater $params: A associative array of key/value pairs as
-     * received from the IDFyed Go server.
+     * received from the Diglias Go server.
      */
     function verifyAuthnResponse($params)
     {
