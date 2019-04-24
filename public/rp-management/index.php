@@ -1,10 +1,10 @@
 <?php
 /**
- * Copyright 2017 (C) Diglias AB
+ * Copyright 2019 (C) IDFyed AB
  *
  * @author jonas
  *
- * Call the Diglias service trough a backend channel and add a attribute
+ * Call the Diglias service through a backend channel and add a attribute
  * to the Diglias users profile.
  *
  */

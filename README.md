@@ -3,7 +3,7 @@
 A PHP based web application implementing an integration with the
 Diglias GO service to authenticate users using the Diglias Me digital
 ID. Even though this example focuses on using the
-Diglias Me Digtial ID, implementations that use alternate ID:s such as
+Diglias Me Digital ID, implementations that use alternate ID:s such as
 Bank ID or Telia will be very similar and the authentication example is relevant in
 those cases as well.
 
@@ -17,8 +17,8 @@ implementer would have to use the information retrieved from the Diglias
 system to authorize the user in the application context.
 
 ## Compatibility
-Since the application is pure PHP it should be possible to run on any platform where PHP exists. It has been developed 
-and tested on Mac OS X. 
+Since the application is pure PHP it should be possible to run on any platform where PHP exists. It has been developed
+and tested on Mac OS X.
 
 ## Dependencies
 The application is depending on PHP 5.x and a web server on the hosting system and [*composer*](http://getcomposer.org)
@@ -35,7 +35,7 @@ In the root of the project run `composer install` to download project dependenci
 To run the application with the [PHP Built-in web server](http://php.net/manual/en/features.commandline.webserver.php)
 issue the following command in the root of the project:
 
-$ `php -S localhost:8123 -t public` 
+$ `php -S localhost:8123 -t public`
 
 For security reasons the relying party configuration used in the code will only accept requests
 originating from `http(s)://localhost*`.
@@ -47,7 +47,7 @@ Point your browser to [http://localhost:8123](). The sample includes
 #### Authenticate
 
 Demonstrates authentication of a user either by requesting a default
-set of attribute or by selecting a subset of attributes to request. 
+set of attribute or by selecting a subset of attributes to request.
 Once the authentication has been successfully completed, it is possible
 to add a value to the user's Diglias using the backend RP Management API.
 
@@ -86,16 +86,16 @@ The code related to Diglias is located as follows:
 defined.
 
 * `src/Diglias/*` - Wrapper/Helper classes aiding in the communication with Diglias implementing low level integration
-functionallity.
+functionality.
 
 
-* `config/config.php` - Defines a number of global variables contanning configuration data related to the integration
+* `config/config.php` - Defines a number of global variables containing configuration data related to the integration
 with the Diglias Go service.
 
 ## Contact and Feedback
 
 Any questions, or feedback on the code or Diglias in general?
 
-playground@diglias.com
+playground@idfyed.com
 
-Copyright (c) 2018 Diglias AB
+Copyright (c) 2019 IDFyed Solutions AB

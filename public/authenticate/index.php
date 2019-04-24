@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2017 (C) Diglias AB
+ * Copyright 2019 (C) IDFyed Solutions AB
  *
  * @author jonas
  *
@@ -50,7 +50,3 @@ if (count($_POST) > 0) {
 $RP = new RelyingParty(COMPANY_NAME, MAC_KEY, EAPI_ENDPOINT);
 
 header('Location: ' . $RP->buildAuthnURL($params), true, 302);
-
-
-
-

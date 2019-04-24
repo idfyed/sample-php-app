@@ -1,10 +1,10 @@
 <?php
 /**
- * Copyright 2017 (C) Diglias AB
+ * Copyright 2019 (C) IDFyed Solutions AB
  *
  * @author jonas
  *
- * Recieves the authnResponse from the Dilgias GO service and transforms it to
+ * Receives the authnResponse from the Diglias GO service and transforms it to
  * a request that normally would be sent to the application in the app-initiated flow.
  *
  */

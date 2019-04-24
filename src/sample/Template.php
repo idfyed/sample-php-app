@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2017 (C) Diglias AB
+ * Copyright 2019 (C) IDFyed Solutions AB
  *
  * Immutable class that wraps the Handlebars engine and configuration.
  *
@@ -16,7 +16,7 @@ class Template
 {
 
     /**
-     * Constructs a template a and configures the Handlebars engine.
+     * Constructs a template and configures the Handlebars engine.
      *
      * @param $templateName name of the template to render when the render method is called
      */

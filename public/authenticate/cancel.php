@@ -1,6 +1,6 @@
 <?php
 /**
-* Copyright 2017 (C) Diglias AB
+* Copyright 2019 (C) IDFyed Solutions AB
 *
 * @author jonas
 *
@@ -15,4 +15,3 @@ use sample\Template;
 
 $t = new Template('cancel');
 echo $t->render(null);
-  

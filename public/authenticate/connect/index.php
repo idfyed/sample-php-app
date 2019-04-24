@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2017 (C) Diglias AB
+ * Copyright 2019 (C) IDFyed Solutions AB
  *
  * Prepare a message to the Diglias server and redirect the users
  * browser to Diglias to ask the user to have a attribute added to

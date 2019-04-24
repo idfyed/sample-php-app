@@ -1,13 +1,13 @@
 <?php
 
 /**
- * Copyright 2017 (C) Diglias AB
+ * Copyright 2019 (C) IDFyed Solutions AB
  *
  * @author jonas
  *
- * A class that wrapps communication to the Diglias RP Management API.
+ * A class that wraps communication to the Diglias RP Management API.
  *
- * The API specificaiton can be found @: https://test.diglias.com/doc-rp/rp-mgmt.jsp
+ * The API specification can be found @: https://test.idfyed.com/doc-rp/rp-mgmt.jsp
  *
  */
 
@@ -22,7 +22,7 @@ class Client
      * Constructs a immutable client object that can communicate with the RPManagement API. The class relys on the curl
      * module witch needs to be enabled.
      *
-     * @param $companyName - The RP company name from the DIglias configuration
+     * @param $companyName - The RP company name from the Diglias configuration
      * @param $username - Username for authentication
      * @param $secret - Password for authentication
      * @param $endpoint - Endpoint select a value from RPManagement\Endpoint
@@ -39,7 +39,7 @@ class Client
      *
      * Sends a request to the Diglias service to add a attribute value to the given users Diglias profile.
      *
-     * @param $userId - ID of the user as returned in a eralier interaction where the user was authenticated by Diglias.
+     * @param $userId - ID of the user as returned in a earlier interaction where the user was authenticated by Diglias.
      * @param $attributeName - Name of the attribute to add.
      * @param $attributeValue - Value to add
      * @return mixed - 204 on success, all other values indicate failure, the value is to be interpreted as a HTTP

@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "32f9e541b883e1195a5fbdc749537f22",
+    "content-hash": "feadd8755dc2546c34cda0acf5c71cc4",
     "packages": [
         {
             "name": "xamin/handlebars.php",

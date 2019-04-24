@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2017 (C) Diglias AB
+ * Copyright 2019 (C) IDFyed Solutions AB
  *
  * @author jonas
  *
@@ -18,4 +18,3 @@ echo $t->render( array(
         'code' => $_GET['error_code'],
         'message' => $_GET['error_message']
 ));
-

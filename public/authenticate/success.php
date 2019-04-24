@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Copyright 2017 (C) Diglias AB
+ * Copyright 2019 (C) IDFyed Solutions AB
  *
  * @author jonas
  *
  * The Diglias GO server will redirect the users browser to POST to this URL
- * once the authenitcation has been sucessfullty completed.
+ * once the authentication has been sucessfully completed.
  *
  */
 

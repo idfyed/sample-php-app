@@ -1,14 +1,14 @@
 <?php
 
 /**
- * Copyright 2017 (C) Diglias AB
+ * Copyright 2019 (C) IDFyed Solutions AB
  *
  * @author jonas
  *
  * A class that aid in the implementation of the EAPI protocol to
  * authenticate users trough the Diglias GO backend.
  *
- * The API specificaiton can be found @: https://test.diglias.com/doc-rp/eapi.jsp
+ * The API specification can be found @: https://test.idfyed.com/doc-rp/eapi.jsp
  *
  */
 
@@ -18,7 +18,7 @@ class RelyingParty
 {
 
     /*
-    * Constructs a RelyingParty object intitializing with information
+    * Constructs a RelyingParty object initializing with information
     * about what server side RP configuration to refer to.
     */
     function __construct($companyName, $macKey, $endpoint = Endpoint::Prod)
@@ -63,7 +63,7 @@ class RelyingParty
      * a mac and comparing it with the enclosed one.
      *
      * @paramater $params: A associative array of key/value pairs as
-     * receieved from the Diglias Go server.
+     * received from the Diglias Go server.
      */
     function verifyAuthnResponse($params)
     {
