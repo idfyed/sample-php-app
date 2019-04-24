@@ -6,7 +6,7 @@
  * @author jonas
  *
  * The Diglias GO server will redirect the users browser to POST to this URL
- * once the authentication has been sucessfullty completed.
+ * once the authentication has been sucessfully completed.
  *
  */
 

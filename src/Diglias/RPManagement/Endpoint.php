@@ -5,8 +5,8 @@
  *
  * @author jonas
  *
- * Enumeration of possible end points - used as constrcutor argument
- * when creating a Client party object.
+ * Enumeration of possible end points - used as constructor argument
+ * when creating a Client object.
  *
  */
 

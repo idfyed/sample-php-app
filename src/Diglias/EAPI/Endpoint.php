@@ -4,7 +4,7 @@
  *
  *
  * Enumeration of possible end points - used as constructor argument
- * when creating a Diglias party object.
+ * when creating a Diglias relying party object.
  * @author jonas
  */
 

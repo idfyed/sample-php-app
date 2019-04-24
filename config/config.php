@@ -1,10 +1,10 @@
 <?php
 
-// The COMPANY_NAME is supplied by Diglias when a configuration for a
+// The COMPANY_NAME is supplied by IDFyed when a configuration for a
 // specific customer is set up in the Diglias Go system.
 define("COMPANY_NAME","playground",true);
 
-// The MAC_KEY is supplied by Diglias when a configuration for a
+// The MAC_KEY is supplied by IDFyed when a configuration for a
 // specific customer is set up in the Diglias Go system. It should be
 // used to verify the authenticity of all messages passed to and received
 // from the Diglias Go server.
