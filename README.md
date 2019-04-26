@@ -41,7 +41,7 @@ For security reasons the relying party configuration used in the code will only 
 originating from `http(s)://localhost*`.
 
 ### Running the application
-Point your browser to [http://localhost:8123](). The sample includes
+Point your browser to [http://localhost:8123](http://localhost:8123). The sample includes
 3 main scenarios:
 
 #### Authenticate
