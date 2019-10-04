@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2019 (C) IDFyed Solutions AB
+ * Copyright 2019 (C) Idfyed Solutions AB
  *
  *
  * Enumeration of possible end points - used as constructor argument

@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2019 (C) IDFyed Solutions AB
+ * Copyright 2019 (C) Idfyed Solutions AB
  *
  * @author jonas
  *
@@ -14,7 +14,7 @@ require '../../config/config.php';
 
 use Idfyed\EAPI\RelyingParty;
 
-// Add a timestamp to the response, it would normally be in the response from the Idfyed Go service
+// Add a timestamp to the response, it would normally be in the response from the Idfyed service
 // as part of a app-initiated flow.
 $now = new DateTime("now", new DateTimeZone('UTC'));
 $_POST['auth_timestamp'] = $now->format(DATE_ISO8601);

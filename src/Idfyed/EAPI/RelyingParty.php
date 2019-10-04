@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Copyright 2019 (C) IDFyed Solutions AB
+ * Copyright 2019 (C) Idfyed Solutions AB
  *
  * @author jonas
  *
@@ -59,7 +59,7 @@ class RelyingParty
 
     /**
      *
-     * Validates the response from the Idfyed Go server by computing
+     * Validates the response from the Idfyed server by computing
      * a mac and comparing it with the enclosed one.
      *
      * @paramater $params: A associative array of key/value pairs as

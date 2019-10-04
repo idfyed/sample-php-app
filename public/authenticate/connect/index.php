@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2019 (C) IDFyed Solutions AB
+ * Copyright 2019 (C) Idfyed Solutions AB
  *
  * Prepare a message to the Idfyed server and redirect the users
  * browser to Idfyed to ask the user to have a attribute added to

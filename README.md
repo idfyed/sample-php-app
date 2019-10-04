@@ -1,4 +1,4 @@
-# Idfyed Go PHP sample application
+# Idfyed PHP sample application
 
 A PHP based web application implementing an integration with the
 Idfyed GO service to authenticate users using the Idfyed Me digital
@@ -10,7 +10,7 @@ those cases as well.
 ## Disclaimer
 
 This is by no means a fully-fledged web application, it is only a
-example on how to communicate with the Idfyed Go service to
+example on how to communicate with the Idfyed service to
 authenticate a user and retrieve user attributes. The application does
 not implement authorization at all. In a real world scenario the
 implementer would have to use the information retrieved from the Idfyed
@@ -90,7 +90,7 @@ functionality.
 
 
 * `config/config.php` - Defines a number of global variables containing configuration data related to the integration
-with the Idfyed Go service.
+with the Idfyed service.
 
 ## Contact and Feedback
 
@@ -98,4 +98,4 @@ Any questions, or feedback on the code or Idfyed in general?
 
 playground@idfyed.com
 
-Copyright (c) 2019 IDFyed Solutions AB
+Copyright (c) 2019 Idfyed Solutions AB

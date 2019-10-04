@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2019 (C) IDFyed AB
+ * Copyright 2019 (C) Idfyed Solutions AB
  *
  * @author jonas
  *
