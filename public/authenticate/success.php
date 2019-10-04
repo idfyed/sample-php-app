@@ -5,7 +5,7 @@
  *
  * @author jonas
  *
- * The Idfyed GO server will redirect the users browser to POST to this URL
+ * The Idfyed server will redirect the users browser to POST to this URL
  * once the authentication has been sucessfully completed.
  *
  */

@@ -4,8 +4,8 @@
  *
  * @author jonas
  *
- * The Idfyed GO server will redirect the users browser this URL
- * if the authentication gets rejected by the Idfyed GO server.
+ * The Idfyed server will redirect the users browser this URL
+ * if the authentication gets rejected by the Idfyed server.
  *
  */
 

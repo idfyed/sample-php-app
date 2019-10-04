@@ -4,7 +4,7 @@
  *
  * @author jonas
  *
- * Receives the authnResponse from the Idfyed GO service and transforms it to
+ * Receives the authnResponse from the Idfyed service and transforms it to
  * a request that normally would be sent to the application in the app-initiated flow.
  *
  */

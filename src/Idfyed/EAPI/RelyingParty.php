@@ -6,7 +6,7 @@
  * @author jonas
  *
  * A class that aid in the implementation of the EAPI protocol to
- * authenticate users trough the Idfyed GO backend.
+ * authenticate users trough the Idfyed backend.
  *
  * The API specification can be found @: https://test.idfyed.com/doc-rp/eapi.jsp
  *

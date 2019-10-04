@@ -1,7 +1,7 @@
 # Idfyed PHP sample application
 
 A PHP based web application implementing an integration with the
-Idfyed GO service to authenticate users using the Idfyed Me digital
+Idfyed service to authenticate users using the Idfyed Me digital
 ID. Even though this example focuses on using the
 Idfyed Me Digital ID, implementations that use alternate ID:s such as
 Bank ID or Telia will be very similar and the authentication example is relevant in
@@ -82,7 +82,7 @@ as a templating engine for rendering HTML.
 
 The code related to Idfyed is located as follows:
 
-* `/public/*` - URL Handlers implementing the application logics where communication with the Idfyed GO service is
+* `/public/*` - URL Handlers implementing the application logics where communication with the Idfyed service is
 defined.
 
 * `src/Idfyed/*` - Wrapper/Helper classes aiding in the communication with Idfyed implementing low level integration

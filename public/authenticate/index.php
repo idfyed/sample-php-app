@@ -4,8 +4,8 @@
  *
  * @author jonas
  *
- * Prepare a message to the Idfyed GO server and redirect the users
- * browser to Idfyed GO to ask the user to authenticate.
+ * Prepare a message to the Idfyed server and redirect the users
+ * browser to Idfyed to ask the user to authenticate.
  *
  */
 

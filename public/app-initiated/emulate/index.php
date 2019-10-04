@@ -4,7 +4,7 @@
  *
  * Emulates a request from the Idfyed app without having to actually scan a static QR code.
  *
- * Prepare a message to the Idfyed GO service and redirect the users
+ * Prepare a message to the Idfyed service and redirect the users
  * browser to Idfyed to ask the user to authenticate. This step is intended
  * for emulation of the App-Initated flow, this is not part of the normal
  * application flow.
