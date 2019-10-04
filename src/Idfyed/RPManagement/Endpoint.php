@@ -10,7 +10,7 @@
  *
  */
 
-namespace Diglias\RPManagement;
+namespace Idfyed\RPManagement;
 
 abstract class Endpoint
 {
