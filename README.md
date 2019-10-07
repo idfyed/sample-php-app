@@ -1,9 +1,9 @@
 # Idfyed PHP sample application
 
 A PHP based web application implementing an integration with the
-Idfyed service to authenticate users using the Idfyed Me digital
+Idfyed service to authenticate users using the Idfyed digital
 ID. Even though this example focuses on using the
-Idfyed Me Digital ID, implementations that use alternate ID:s such as
+Idfyed Digital ID, implementations that use alternate ID:s such as
 Bank ID or Telia will be very similar and the authentication example is relevant in
 those cases as well.
 
