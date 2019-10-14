@@ -1,14 +1,14 @@
 <?php
 /**
- * Copyright 2019 (C) IDFyed Solutions AB
+ * Copyright 2019 (C) Idfyed Solutions AB
  *
  *
  * Enumeration of possible end points - used as constructor argument
- * when creating a Diglias relying party object.
+ * when creating a Idfyed relying party object.
  * @author jonas
  */
 
-namespace Diglias\EAPI;
+namespace Idfyed\EAPI;
 
 abstract class Endpoint
 {

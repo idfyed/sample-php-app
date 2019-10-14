@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Copyright 2019 (C) IDFyed Solutions AB
+ * Copyright 2019 (C) Idfyed Solutions AB
  *
  * @author jonas
  *
@@ -10,7 +10,7 @@
  *
  */
 
-namespace Diglias\RPManagement;
+namespace Idfyed\RPManagement;
 
 abstract class Endpoint
 {

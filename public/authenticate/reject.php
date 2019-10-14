@@ -1,11 +1,11 @@
 <?php
 /**
- * Copyright 2019 (C) IDFyed Solutions AB
+ * Copyright 2019 (C) Idfyed Solutions AB
  *
  * @author jonas
  *
- * The Diglias GO server will redirect the users browser this URL
- * if the authentication gets rejected by the Diglias GO server.
+ * The Idfyed server will redirect the users browser this URL
+ * if the authentication gets rejected by the Idfyed server.
  *
  */
 

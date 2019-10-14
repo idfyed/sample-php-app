@@ -1,10 +1,10 @@
 <?php
 /**
-* Copyright 2019 (C) IDFyed Solutions AB
+* Copyright 2019 (C) Idfyed Solutions AB
 *
 * @author jonas
 *
-* The Diglias GO server will redirect the users browser this URL 
+* The Idfyed server will redirect the users browser this URL 
 * if the user cancels the authentication.
 *
 */

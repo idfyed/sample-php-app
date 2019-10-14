@@ -1,8 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin%7CRoboto&display=swap");
+
 body {
+    font-family: "Roboto", sans-serif;
     padding: 20px;
-    font: 15px "Effra", Helvetica, Arial, sans-serif;
+    font-size:15px;
     margin: 0 auto;
     max-width: 600px;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Cabin", sans-serif;
 }
 
 a {
@@ -10,8 +16,8 @@ a {
 }
 
 .dButton {
-    background-color: #56ad71;
-    color: white;
+    background-color: #FFC800;
+    color: black;
 
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
@@ -30,6 +36,6 @@ a {
 }
 
 .dButton:active {
-    background-color: #006a4b;
+    background-color: rgb(230, 180, 0);
 }
 

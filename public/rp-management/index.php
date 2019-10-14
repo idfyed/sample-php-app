@@ -1,18 +1,18 @@
 <?php
 /**
- * Copyright 2019 (C) IDFyed AB
+ * Copyright 2019 (C) Idfyed Solutions AB
  *
  * @author jonas
  *
- * Call the Diglias service through a backend channel and add a attribute
- * to the Diglias users profile.
+ * Call the Idfyed service through a backend channel and add a attribute
+ * to the Idfyed users profile.
  *
  */
 
 require '../../vendor/autoload.php';
 require '../../config/config.php';
 
-use Diglias\RPManagement\Client;
+use Idfyed\RPManagement\Client;
 
 
 use sample\Template;
